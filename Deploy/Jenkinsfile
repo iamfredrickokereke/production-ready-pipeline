@@ -1,44 +1,30 @@
-pipeline{
-
-	agent any
-
-	stages{
-
-	  stage('Build'){	
-	    steps{
-	      script{
-		sh 'echo "Building Stage"'
-}
-}
-}
-
 	stage('Test'){
-   	  steps{
-	   script{
+   	  steps {
+	   script {
 	     sh 'echo "Test Stage"'
 }
 }
 }
 
 	stage('Package'){
-   	  steps{
-	    script{
+   	  steps {
+	    script {
 	      sh 'echo "Package Stage"'
 }
 }
 }
 
 	stage('Deploy'){
-	  steps{
-	    script{
+	  steps {
+	    script {
 	      sh 'echo "Deploy Stage"'
 }
 }
 }
 
 	stage('Cleanup'){
-    	  steps{
-	    script{
+    	  steps {
+	    script {
 	      sh 'echo "Clean-up Stage"'
 }
 }

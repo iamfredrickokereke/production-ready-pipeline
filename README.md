@@ -18,4 +18,6 @@ These project is implementfollowing project demonstrates the setup of continuous
 |PHP             |scripting language for the application                                                                                                       |
 
 
-Read more updates here: https://www.notion.so/Project-14-CI-CD-with-Jenkins-Ansible-Artifactory-SonarQube-PHP-cd3a7bc12f074f929c87c73287056f24
+Read more updates here:
+
+https://www.notion.so/Production-pipeline-with-Jenkins-Ansible-Artifactory-SonarQube-for-a-PHP-based-Application-cd3a7bc12f074f929c87c73287056f24

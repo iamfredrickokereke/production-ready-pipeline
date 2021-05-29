@@ -1,12 +1,12 @@
 # production-ready-pipeline
 
+* Disclaimer: * This is an ongoing project.
+
 A project showcasing a complete ci/cd process using ansible, Jenkins, sonarqube and artifactory with a PHP Based Application
 
 
-# Continuous Integration with Jenkins, Ansible, Artifactory, Sonarqube and PHP
-
 ## Intro
-The following project demonstrates the setup of continuous integration for a PHP-based application.
+These project is implementfollowing project demonstrates the setup of continuous integration for a PHP-based application.
 
 ## TOOLS USED
 |TOOL            |DESCRIPTION                                                                                                                                  |

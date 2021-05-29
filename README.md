@@ -1,6 +1,6 @@
 # production-ready-pipeline
 
-A project showcasing a complete ci/cd process using ansible, Jenkins, sonarqube and artifactory
+A project showcasing a complete ci/cd process using ansible, Jenkins, sonarqube and artifactory with a PHP Based Application
 
 
 # Continuous Integration with Jenkins, Ansible, Artifactory, Sonarqube and PHP

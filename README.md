@@ -17,3 +17,5 @@ These project is implementfollowing project demonstrates the setup of continuous
 |Sonarqube       |A robust tool for carrying out the implementation of code reliability, maintainability and general software quality gates measures.          |
 |PHP             |scripting language for the application                                                                                                       |
 
+
+Read more updates here: https://www.notion.so/Project-14-CI-CD-with-Jenkins-Ansible-Artifactory-SonarQube-PHP-cd3a7bc12f074f929c87c73287056f24

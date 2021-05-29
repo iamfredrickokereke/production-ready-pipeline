@@ -1,7 +1,7 @@
+* Disclaimer: This is an ongoing project.
+
+
 # production-ready-pipeline
-
-* Disclaimer: * This is an ongoing project.
-
 A project showcasing a complete ci/cd process using ansible, Jenkins, sonarqube and artifactory with a PHP Based Application
 
 

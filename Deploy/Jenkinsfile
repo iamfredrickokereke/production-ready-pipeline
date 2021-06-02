@@ -1,47 +1,38 @@
-pipeline {
-
-	agent any
-
-	stages{
-
-        stage('Build'){	
-          steps{
-            script{
-                sh 'echo "Building Stage"'
-            }
-          }
-        }
-
-        stage('Test'){
-          steps{
-            script{
-                sh 'echo "Test Stage"'
-            }
-          }
-        }
-
-        stage('Package'){
-          steps{
-            script{
-                sh 'echo "Package Stage"'
-            }
-          }
-        }
-
-        stage('Deploy'){
-          steps{
-            script{
-                sh 'echo "Deploy Stage"'
-            }
-          }
-        }
-
-        stage('Cleanup'){
-          steps{
-            script{
-                sh 'echo "Cleanup Stage"'
-            }
-          }
-        }
+pipeline{
+   agent any
+   environment {
+      ANSIBLE_CONFIG="${WORKSPACE}/deploy/ansible.cfg"
     }
+     parameters {
+      string(name: 'inventory_file', defaultValue: '',  description: 'selecting the environment')
+          }
+   stages{
+      stage("Initial cleanup") {
+          steps {
+            dir("${WORKSPACE}") {
+              deleteDir()
+            }
+          }
+        }
+      stage('SCM Checkout') {
+         steps{
+            git branch: 'main', url: 'https://github.com/iamfredrickokereke/production-ready-pipeline'
+         }
+       }
+      stage('Prepare Ansible For Execution') {
+        steps {
+          sh 'echo ${WORKSPACE}'
+        }
+     }
+      stage('Execute Ansible') {
+        steps {
+            ansiblePlaybook colorized: true, credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/${inventory_file}', playbook: 'playbooks/site.yml'
+        }
+      }
+      stage('Clean Workspace after build'){
+        steps{
+          cleanWs()
+        }
+      }
+   }
 }
